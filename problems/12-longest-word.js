@@ -18,6 +18,12 @@ console.log(longestWord('')); // ''
 
 let longestWord = function(sentence) {
     // Your code here
+    // convert sa array
+    //count the character each array
+    //return the array with the highest count
+    let arr = sentence.split(' ')
+
+    return arr.reduce((longest, word) => word.length > longest.length ? word : longest)
 };
 
 // Your code here
@@ -28,4 +34,4 @@ try {
     module.exports = longestWord;
 } catch (e) {
     module.exports = null;
-}
+}
